@@ -23,6 +23,8 @@ published release notes, maintenance branches, and tagged history.
 
 ### Fixed
 
+- Fixed the ECK Platform Overview Warning events panel aggregating on `message.keyword`, Operator errors by controller so reconciler errors without a resource name still appear, and Lens column order on Pods per node by ECK type and Operator errors by controller so those breakdown charts render.
+- Fixed ECK index mappings so sparse dashboard fields such as `status.expectedNodes`, `nodeset.roles`, `zone`, and `last_terminated.reason` exist before any document writes them.
 - Fixed `esdiag setup` repeating provenance field warnings for every older data stream backing index on each run. It now warns per index only for indices that can still receive writes, summarizes older backing indices with unlinked provenance fields in one line per data stream, and only asks for a rollover after adding an alias to a writable index.
 
 ## [0.17.0] - 2026-10-13
